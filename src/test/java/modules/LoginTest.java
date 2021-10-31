@@ -15,10 +15,13 @@ public class LoginTest extends BaseTest {
     @DataProvider
     Object [][] credentials(){
         return new Object[][]{
+                //Positve case
                 new Object[]{"binh.vuonghao@gmail.com","123abcd"},
+                //Negative cases
                 new Object[]{"binh.vuonghao@gmail.com","onebyone"},
                 new Object[]{"Wrongpassword","cannotbypas theCaptcha"},
-                new Object[]{"Somebody@helpme.com","How @_31!>?"}
+                new Object[]{"Somebody@help.me","How @_31!>?"},
+                new Object[]{"ThisTest.cannot@complete.com",""}
         };
     }
 
